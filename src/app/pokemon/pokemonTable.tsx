@@ -1,12 +1,20 @@
-import { pokemon } from "./pokemons";
+import { pokemons } from "./pokemons";
 import PokemonRow from "./pokemonRow";
 
-type Props = [];
+type Props = {
+  pokemonArray: pokemons[];
+};
 
-function PokemonTable(Props: pokemon[]) {
-  //   return <div>
-  //     props.p <PokemonRow />
-  //   </div>;
+function PokemonTable(props: Props) {
+  return (
+    <div>
+      {props.pokemonArray.map((pokemon) => (
+        <div key={pokemon.id}>
+          <PokemonRow pokemon={pokemon} />
+        </div>
+      ))}
+    </div>
+  );
 }
 
 export default PokemonTable;

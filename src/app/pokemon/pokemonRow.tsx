@@ -1,10 +1,7 @@
+import { pokemons } from "./pokemons";
+
 type Props = {
-  pokemon: {
-    id: number;
-    name: string;
-    types: string[];
-    sprite: string;
-  };
+  pokemon: pokemons;
 };
 
 function PokemonRow(props: Props) {
